@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Myeongjo&family=Ovo&display=swap" rel="stylesheet">
     <!-- css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>calcolo del prezzo del biglietto del treno</title>
 </head>
 <body>
 
+<div class="main-container">
+
     <!-- FORM -->
+    <div class="form-container">
+        <h3>INSERISCI I DATI</h3>
     <form id="ticket-form">
         <!-- km -->
         <label for="km">Quanti km vuoi percorrere?</label>
@@ -23,21 +31,24 @@
         <button type="submit" id="my-button">Calcola</button>
 
     </form>
+    </div>
 
     <!-- SEZIONE RISULTATI -->
      <section id="risultato">
-        <h3>Riepilogo</h3>
-        <p>Km: <span id="outputKm">—</span></p>
-        <p>Età: <span id="outputEta">—</span></p>
-        <p>Sconto applicato: <span id="outputSconto">—</span></p>
-        <p><strong>Prezzo finale:</strong> <span id="outputPrezzo">—</span></p>
-</section>
+        <h3>IL TUO BIGLIETTO</h3>
+        <p><strong>Km: </strong><span id="outputKm">—</span></p>
+        <p><strong>Età: </strong><span id="outputEta">—</span></p>
+        <p><strong>Sconto applicato: </strong><span id="outputSconto">—</span></p>
+        <p><strong>PREZZO FINALE:</strong> <span id="outputPrezzo">—</span></p>
+    </section>
+
+</div>
 
 
     
     
 
     <!-- js -->
-     <script type="text/javascript" src="js/script.js"></script>
+     <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

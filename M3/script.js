@@ -3,16 +3,28 @@ const kmUser = document.getElementById("km");
 const ageUser = document.getElementById("age");
 const bottoneCalcola = document.getElementById("my-button");
 
-// COSTANTE DI LAVORO
+//aggiungo selezione per form
+const formBiglietto = document.getElementById("ticket-form");
+
+//• SELEZIONE OUTPUT (dove scrivere i risultati in pagina)
+const outputKm      = document.getElementById("outputKm");
+const outputEta     = document.getElementById("outputEta");
+const outputSconto  = document.getElementById("outputSconto");
+const outputPrezzo  = document.getElementById("outputPrezzo");
+
+// • COSTANTE DI LAVORO
 // fisso il prezzo per km in una costante (così se domani cambia, tocco 1 sola riga)
 const PREZZO_AL_KM = 0.21;
 
-// • ASCOLTO EVENTO CLICK
-bottoneCalcola.addEventListener('click', calcolaPrezzo);
+// • EVENTO — M2 usa il SUBMIT del form (non il click del bottone)
+formBiglietto.addEventListener('submit', calcolaPrezzo);
 
 
 //funzione per calcolare il prezzo del biglietto
-function calcolaPrezzo () {
+function calcolaPrezzo(event) {
+
+    // blocco il comportamento di default del form (refresh/invio)
+    event.preventDefault();
 
     const kmInseriti = Number(kmUser.value);
 
@@ -37,8 +49,9 @@ function calcolaPrezzo () {
     let prezzoFinale = prezzoBase - (prezzoBase * scontoPercentuale / 100);
 
   //OUTPUT
-  console.log("prezzo base:", prezzoBase.toFixed(2) + "€");
-  console.log("sconto applicato:", scontoPercentuale + "%");
-  console.log("prezzo finale:", prezzoFinale.toFixed(2) + "€");
+  outputKm.textContent     = kmInseriti;                 // mostro i km inseriti
+  outputEta.textContent    = etaInserita + " anni";      // mostro l’età
+  outputSconto.textContent = scontoPercentuale + "%";    // percentuale sconto
+  outputPrezzo.textContent = prezzoFinale.toFixed(2) + "€"; // prezzo formattato a 2 decimali
 
 }
