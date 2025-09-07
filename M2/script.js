@@ -3,6 +3,15 @@ const kmUser = document.getElementById("km");
 const ageUser = document.getElementById("age");
 const bottoneCalcola = document.getElementById("my-button");
 
+//aggiungo selezione per form
+const formBiglietto = document.getElementById("ticket-form");
+
+//aggiungo selezione per output
+const outputKm      = document.getElementById("outputKm");
+const outputEta     = document.getElementById("outputEta");
+const outputSconto  = document.getElementById("outputSconto");
+const outputPrezzo  = document.getElementById("outputPrezzo");
+
 // COSTANTE DI LAVORO
 // fisso il prezzo per km in una costante (così se domani cambia, tocco 1 sola riga)
 const PREZZO_AL_KM = 0.21;
