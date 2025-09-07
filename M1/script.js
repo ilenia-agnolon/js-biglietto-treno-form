@@ -14,16 +14,19 @@ bottoneCalcola.addEventListener('click', calcolaPrezzo);
 //funzione per calcolare il prezzo del biglietto
 function calcolaPrezzo () {
 
-    const kmInseriti = parseFloat(kmUser.value);
+    const kmInseriti = Number(kmUser.value);
 
-    const etaInserita = parseInt(ageUser.value);
+    const etaInserita = Number(ageUser.value);
 
         //stampo
         console.log("km inseriti:", kmInseriti);
         console.log("età inserita:", etaInserita, "anni");
 
     // • ELABORAZIONE
-     let scontoPercentuale = 0;
+    const prezzoBase = kmInseriti * PREZZO_AL_KM; 
+
+    let scontoPercentuale = 0;
+
 
     if (etaInserita < 18) {
         scontoPercentuale = 20;
