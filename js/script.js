@@ -16,5 +16,7 @@ function calcolaPrezzo () {
 
      const kmInseriti = parseFloat(kmUser.value);
 
+    const etaInserita = parseInt(ageUser.value);
+
 
 }
