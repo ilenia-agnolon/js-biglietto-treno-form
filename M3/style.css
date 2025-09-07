@@ -1,0 +1,30 @@
+/*************************************************
+    GENERAL RULES CSS
+ *************************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+  font-family: 'Montserrat', sans-serif;  
+  font-size: 12px;
+}
+
+body {
+    background-color: rgb(217, 255, 218);
+}
+
+#my-button {
+    width: 140px;
+    padding: 10px 20px;
+    line-height: 0;
+    background-color: whitesmoke;
+    color: rgb(92, 92, 92);
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+}
