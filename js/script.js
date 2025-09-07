@@ -14,9 +14,13 @@ bottoneCalcola.addEventListener('click', calcolaPrezzo);
 //funzione per calcolare il prezzo del biglietto
 function calcolaPrezzo () {
 
-     const kmInseriti = parseFloat(kmUser.value);
+    const kmInseriti = parseFloat(kmUser.value);
 
     const etaInserita = parseInt(ageUser.value);
+
+        //stampo
+        console.log("km inseriti:", kmInseriti);
+        console.log("età inserita:", etaInserita, "anni");
 
 
 }
